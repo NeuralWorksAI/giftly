@@ -1,5 +1,30 @@
 {% extends 'base.html' %}{% block content %}{% include 'dashnav.html' %}
-<div class="full-main">
-  <h1>Welcome Back, {{session['username']}}</h1>
+<div class="full-main" data-aos="fade-up">
+  <h1 style="font-size: 70px; font-style: black;">Welcome Back, {{session['username']}}</h1>
+  <div style="padding-top: 100px"></div>
+  <div style="
+  width: 500px;
+  text-align: left; position: absolute;
+  left: 50%;
+  margin-left: -150px">
+  <h2>Search A Name</h2>
+  <div>
+    <form class="input-group rounded w-10" method="post" novalidate>
+      {{ form.csrf_token }}
+      {{ form.search(size=32, class_="form-search form-control rounded w-10",
+      placeholder="Josh Madi" ) }}
+      {{ form.submit(class="btn btn-lg btn-dark btn-block") }}
+    </form>
+  </div>
+  <div>
+  <div style="padding-top: 50px"></div>
+    <h2 style="color: gray">
+      Recent Results
+    </h2>
+    <p style="padding: 0; margin: 0;"><a href="#" style="font-size: 32px; color: #93c5fd">Iphone 11</a></p>
+    <p  style="padding: 0; margin: 0;"><a href="#" style="font-size: 32px; color: #93c5fd">Playstation 5</a></p>
+    <p style="padding: 0; margin: 0;"><a href="#" style="font-size: 32px; color: #93c5fd">Wedding Ring ;)</a></p>
+  </div>
+  </div>
   </div>
 {% endblock %}

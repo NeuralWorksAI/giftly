@@ -14,3 +14,7 @@ class RegisterForm(FlaskForm):
     password = PasswordField('Password', validators=[DataRequired()])
     confirmPassword = PasswordField('Confirm Password', validators=[DataRequired(), EqualTo('password')])
     submit = SubmitField('Sign Up')
+
+class SearchForm(FlaskForm):
+    search = StringField('Search')
+    submit = SubmitField('Search')

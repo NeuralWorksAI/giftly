@@ -5,7 +5,7 @@ file_dir = os.path.dirname(__file__)
 sys.path.append(file_dir)
 
 from app import app
-from app.forms import LoginForm, RegisterForm
+from app.forms import LoginForm, RegisterForm, SearchForm
 from flask import render_template, session, redirect, url_for, flash
 from os import getenv
 from pymongo import MongoClient
@@ -54,8 +54,27 @@ def signup():
         return redirect(url_for('dashboard'))
     return render_template("signup.html", form=form)
 
-@app.route("/dashboard")
+@app.route('/peter')
+def petersearch():
+    return render_template("searchresultpeter.html")
+
+@app.route('/joshua')
+def joshuasearch():
+    return render_template("searchresultjoshua.html")
+
+@app.route("/dashboard", methods=['GET', 'POST'])
 def dashboard():
     if not 'username' in session:
         return redirect(url_for('signin'))
-    return render_template("dashboard.html", session=session)
+    form=SearchForm()
+    print("test")
+    if form.validate_on_submit():
+        search = form.search.data
+        print(search)
+        if "peter" in search.lower():
+            return redirect(url_for('petersearch'))
+        else:
+            return redirect(url_for('joshuasearch'))
+    else:
+        print("form not valid")
+    return render_template("dashboard.html", session=session, form=form)
