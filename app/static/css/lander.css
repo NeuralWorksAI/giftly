@@ -1,0 +1,90 @@
+.nav-logo {
+  width: 200px;
+  padding: 10px;
+}
+
+nav {
+  padding: 0 30px;
+}
+
+.nav-item {
+  margin: 0 10px;
+}
+
+.jumbotron {
+  padding: 100px 0;
+  -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 1s; /* Firefox < 16 */
+  -ms-animation: fadein 1s; /* Internet Explorer */
+  -o-animation: fadein 1s; /* Opera < 12.1 */
+  animation: fadein 1s;
+}
+
+@media only screen and (min-width: 992px) {
+.jumbotron {
+  padding: 20vh;
+}}
+
+.jumbo-header {
+  font-weight: 500;
+}
+
+.after-wave {
+  background-color: #ff5843;
+}
+
+.after-wave p,
+.after-wave h2 {
+  color: #fff;
+}
+
+.after-wave a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.col-group p {
+  font-size: 18px;
+}
+
+.col-group h2 {
+  font-size: 35px;
+  font-weight: 600;
+}
+
+.col-group {
+  max-width: 80%;
+  margin: auto;
+}
+
+.col-image {
+  max-width: 60%;
+  margin: auto;
+}
+
+.footer-basic {
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.card {
+  max-width: 50%;
+  margin: 20px auto;
+}
+
+.card-match {
+  margin: 30px 70px;
+  text-align: left;
+}
+
+.card-match p,
+.card-match a {
+  font-size: 20px;
+}
+
+.mystats {
+  font-size: 20px;
+  padding: 40px 100px;
+  margin: auto;
+  text-align: center;
+}

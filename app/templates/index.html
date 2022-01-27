@@ -1,0 +1,106 @@
+{% extends 'base.html' %} {% block content %}
+<nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand" href="{{ url_for('index') }}"
+    ><img class="nav-logo" src="../static/img/Diversify..svg"
+  /></a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarNav"
+    aria-controls="navbarNav"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <div class="nav navbar-nav ms-auto mx-3 navbar-right">
+      <a class="nav-item nav-link text-center" href="{{ url_for('index') }}"
+        >Devpost</a
+      >
+      <a class="nav-item nav-link text-center" href="{{ url_for('index') }}"
+        >About</a
+      >
+      <a
+        class="btn btn-outline-dark m-2 my-sm-0"
+        href="{{ url_for('signin') }}"
+      >
+        Sign In
+      </a>
+    </div>
+  </div>
+</nav>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-2 jumbo-header">
+      A new, inclusive way to find new friends.
+    </h1>
+    <a
+      class="btn btn-dark btn-lg my-2 my-sm-0 lead"
+      href="{{ url_for('signup') }}"
+    >
+      Start Now
+    </a>
+  </div>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+  <path
+    fill="#ff5843"
+    fill-opacity="1"
+    d="M0,96L48,122.7C96,149,192,203,288,234.7C384,267,480,277,576,240C672,203,768,117,864,122.7C960,128,1056,224,1152,245.3C1248,267,1344,213,1392,186.7L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
+  ></path>
+</svg>
+<div class="container-fluid after-wave py-5">
+  <div class="row gy-5 align-items-center">
+    <div class="col-sm-6">
+      <div
+        class="col-group p-5"
+        data-aos="fade-up"
+      >
+        <h2>Same Interests, Different Stories</h2>
+        <p>
+          Diversify uses a special ranking algorithm to match you with people
+          you share similar interests to you, from all around the world.
+        </p>
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="col-group p-5" data-aos="fade-up">
+        <img class="col-image" src="../static/img/high-five.svg" />
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div class="col-group p-5" data-aos="fade-up">
+        <img class="col-image" src="../static/img/accessibility.svg" />
+      </div>
+    </div>
+    <div class="col-sm-6">
+      <div
+        class="col-group p-5"
+        data-aos="fade-up"
+      >
+        <h2>A platform for everyone</h2>
+        <p>
+          To promote accesibility in our platform, Diversify features custom
+          voice recordings from users and text voicovers by the creators, simply
+          double click to hear them!
+        </p>
+      </div>
+    </div>
+  </div>
+  <footer class="footer-basic">
+    <ul class="list-inline">
+      <li class="list-inline-item"><a href="#">About</a></li>
+      <li class="list-inline-item"><a href="#">Devpost</a></li>
+      <li class="list-inline-item">
+        <a href="{{url_for('signin')}}">Sign In</a>
+      </li>
+      <li class="list-inline-item">
+        <a href="{{url_for('signup')}}">Sign Up</a>
+      </li>
+    </ul>
+    <p class="copyright">A NeuralWorks project</p>
+  </footer>
+</div>
+{% endblock %}

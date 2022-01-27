@@ -1,0 +1,36 @@
+{% extends 'base.html' %}{% block content %}
+<div class="full-main">
+  <form class="form-signin pt-5 mt-5" method="post" novalidate>
+    <a class="navbar-brand m-5" href="{{ url_for('index') }}"
+      ><img class="nav-logo mb-5" src="../static/img/Diversify..svg"
+    /></a>
+    {{ form.hidden_tag() }}
+    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+    <div>
+      {{ form.username(size=32, class_="form-control form-username",
+      placeholder="Username" ) }} {% for error in form.username.errors %}
+      <span style="color: red">[{{ error }}]</span>
+      {% endfor %}
+    </div>
+    <div>
+      {{ form.password(size=32, class_="form-control form-password",
+      placeholder="Password" ) }} {% for error in form.username.errors %}
+      <span style="color: red">[{{ error }}]</span>
+      {% endfor %}
+    </div>
+    <div class="checkbox mb-3">
+      <label> <input type="checkbox" value="remember-me" /> Remember me </label>
+    </div>
+    <br />
+    <p>{{ form.submit(class="btn btn-lg btn-dark btn-block m-2") }}</p>
+  </form>
+  {% with messages = get_flashed_messages() %} {% if messages %} {% for message
+  in messages %}
+  <p class="error">{{ message }}</p>
+  {% endfor %} {% endif %} {% endwith %}
+  <a href="{{ url_for('signup') }}">Don't have an account? Sign Up</a>
+  <p class="mt-5 mb-3 text-muted">
+    © 2021 <a class="text-muted" href="{{url_for('index')}}">Back to home</a>
+  </p>
+</div>
+{% endblock %}

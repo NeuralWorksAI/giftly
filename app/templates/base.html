@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8" />
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../static/img/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../static/img/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../static/img/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link href="../static/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="../static/css/lander.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="../static/css/auth.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/0e7cbfa068.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Diversify.</title>
+  </head>
+  <body style="margin: 0; padding: 0">
+    {% block content %}{% endblock %}
+  </body>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"
+  ></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    function playAudio(url) {
+      new Audio("../static/audio/" + url + ".mp3").play();
+    }
+  </script>
+  <script>
+    AOS.init();
+  </script>
+</html>

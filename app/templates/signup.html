@@ -1,0 +1,40 @@
+{% extends 'base.html' %}{% block content %}
+<div class="full-main">
+  <form class="form-signin pt-5 mt-5" action="" method="post" novalidate>
+    <a class="navbar-brand m-5" href="{{ url_for('index') }}"
+      ><img class="nav-logo mb-5" src="../static/img/Diversify..svg"
+    /></a>
+    {{ form.hidden_tag() }}
+    <h1 class="h3 mb-3 font-weight-normal">Create a new account</h1>
+    <div class="form-group">
+      <label for="username">Username:</label>
+      {{ form.username(size=32, class_="form-control", placeholder="Username" )
+      }}
+    </div>
+    <div class="form-group">
+      <label for="username">Email:</label>
+      {{ form.email(size=32, class_="form-control", placeholder="Email" ) }}
+    </div>
+    <div class="form-group">
+      <label for="username">Password:</label>
+      {{ form.password(size=32, class_="form-control", placeholder="Password" )
+      }}
+    </div>
+    <div class="form-group">
+      <label for="username">Confirm Password:</label>
+      {{ form.confirmPassword(size=32, class_="form-control",
+      placeholder="Confirm Password" ) }}
+    </div>
+    <p>{{ form.submit(class="btn btn-lg btn-dark btn-block m-2") }}</p>
+  </form>
+  {% with messages = get_flashed_messages() %} {% if messages %} {% for message
+  in messages %}
+  <p class="error">{{ message }}</p>
+  {% endfor %} {% endif %} {% endwith %}
+  <a href="{{ url_for('signin') }}">Already have an account? Sign In</a>
+  <p class="mt-5 mb-3 text-muted">
+    © 2021 <a class="text-muted" href="{{url_for('index')}}">Back to home</a>
+  </p>
+  <br />
+</div>
+{% endblock %}

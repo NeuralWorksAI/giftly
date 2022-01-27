@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand" href="{{ url_for('index') }}"
+    ><img class="nav-logo" src="../static/img/Diversify..svg"
+  /></a>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarNav"
+    aria-controls="navbarNav"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <div class="nav navbar-nav ms-auto mx-3 navbar-right">
+      <a class="nav-item nav-link text-center" href="#"
+        >{{ session['username'] }}</a
+      >
+      <a
+        class="btn btn-outline-danger m-2 my-sm-0"
+        href="{{ url_for('index') }}"
+      >
+        Sign Out
+      </a>
+    </div>
+  </div>
+</nav>
